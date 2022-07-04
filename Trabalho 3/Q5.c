@@ -1,11 +1,6 @@
 #include <stdio.h>
 
-int somatorio(int n){
-	if(n > 0)
-	  return n + somatorio(n - 1);
-  else
-    return 0;
-}
+int somatorio(int n);
 
 int main(){
 
@@ -17,4 +12,11 @@ int main(){
   printf("O somatório é %d : ", resultado = somatorio(num));
   
   return 0;
+}
+
+int somatorio(int n){
+	if(n > 0)
+	  return n + somatorio(n - 1);
+  else
+    return 0;
 }

@@ -1,13 +1,6 @@
 #include<stdio.h>
 
-int Expoente(int k, int n){
-
-	if(n > 0)
-		return k * Expoente(k, n - 1);
-	else
-		return 1;
-}
-
+int Expoente(int k, int n);
 
 int main(){
 
@@ -21,4 +14,12 @@ int main(){
 	printf("%d elevado a %d é  %d", n1, n2, resultado = Expoente(n1, n2));
 
 	return 0;
+}
+
+int Expoente(int k, int n){
+
+	if(n > 0)
+		return k * Expoente(k, n - 1);
+	else
+		return 1;
 }

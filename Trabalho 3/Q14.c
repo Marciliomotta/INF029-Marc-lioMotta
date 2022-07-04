@@ -1,13 +1,6 @@
 #include <stdio.h>
 
-void NumCrescente(int n){
-
-  if(n >= 0){
-    NumCrescente(n - 1);
-      if(n % 2 == 0)
-      printf("\n%d\n", n);
-  }
-}
+void NumCrescente(int n);
 
 int main(){
 
@@ -19,4 +12,13 @@ int main(){
   NumCrescente(num);
 
   return 0;
+}
+
+void NumCrescente(int n){
+
+  if(n >= 0){
+    NumCrescente(n - 1);
+      if(n % 2 == 0)
+      printf("\n%d\n", n);
+  }
 }

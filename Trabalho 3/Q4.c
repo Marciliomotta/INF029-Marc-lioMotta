@@ -1,11 +1,7 @@
 #include<stdio.h>
 #define TAM 10
 
-int somaVet(int vetor[], int tamVetor) {
-  if (tamVetor == 0)
-    return 0;
-  return (somaVet(vetor, tamVetor - 1) + vetor[tamVetor - 1]);
-}
+int somaVet(int vetor[], int tamVetor);
 
 int main(){
 
@@ -19,4 +15,10 @@ int main(){
   printf ("A soma dos elementos é: %d\n",  somaVet(vet, TAM));
     
   return 0;
+}
+
+int somaVet(int vetor[], int tamVetor){
+  if (tamVetor == 0)
+    return 0;
+  return (somaVet(vetor, tamVetor - 1) + vetor[tamVetor - 1]);
 }

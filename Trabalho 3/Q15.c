@@ -1,13 +1,6 @@
 #include <stdio.h>
 
-void NumDecrescente(int n){
-
-  if(n >= 0){
-    if(n % 2 == 0)
-      printf("\n%d\n ", n);
-      NumDecrescente(n - 1);
-  }
-}
+void NumDecrescente(int n);
 
 int main(){
 
@@ -20,4 +13,13 @@ int main(){
   NumDecrescente(num);
 
   return 0;
+}
+
+void NumDecrescente(int n){
+
+  if(n >= 0){
+    if(n % 2 == 0)
+      printf("\n%d\n ", n);
+      NumDecrescente(n - 1);
+  }
 }

@@ -1,12 +1,6 @@
 #include <stdio.h>
 
-void Numcrescente(int n){
-
-  if(n >= 0){
-    Numcrescente(n - 1);
-    printf("\n%d\n ", n);
-  }
-}
+void Numcrescente(int n);
 
 int main(){
 
@@ -18,4 +12,12 @@ int main(){
   Numcrescente(num);
 
   return 0;
+}
+
+void Numcrescente(int n){
+
+  if(n >= 0){
+    Numcrescente(n - 1);
+    printf("\n%d\n ", n);
+  }
 }

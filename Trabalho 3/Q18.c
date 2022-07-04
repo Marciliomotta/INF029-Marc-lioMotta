@@ -1,16 +1,7 @@
 #include <stdio.h>
 
-int FatN(int n){
-  if(n == 1)
-    return 1;
-  return n * FatN(n - 1);
-}
-
-int SuperFat(int n){
-  if(n == 1)
-      return 1;
-  return FatN(n) * SuperFat(n - 1);
-}
+int FatN(int n);
+int SuperFat(int n);
 
 int main(){
   int num;
@@ -21,4 +12,16 @@ int main(){
   printf("O super fatorial de %d é %d\n", num, SuperFat(num));
 
   return 0;
+}
+
+int FatN(int n){
+  if(n == 1)
+    return 1;
+  return n * FatN(n - 1);
+}
+
+int SuperFat(int n){
+  if(n == 1)
+      return 1;
+  return FatN(n) * SuperFat(n - 1);
 }
